@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
   reactStrictMode: true,
-  devIndicators: false,
+  devIndicators: { position: "bottom-right" },
+  output: "export",
+  trailingSlash: true,
+  basePath: isProd ? "/elvin" : "",
+  assetPrefix: isProd ? "/elvin/" : "",
   images: {
-    formats: ["image/avif", "image/webp"],
+    unoptimized: true,
   },
 };
 
