@@ -1,14 +1,18 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === "production";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const nextConfig = {
   reactStrictMode: true,
   devIndicators: { position: "bottom-right" },
   output: "export",
   trailingSlash: true,
-  basePath: isProd ? "/elvin" : "",
+  basePath,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     unoptimized: true,
+    path: `${basePath}/_next/image`,
   },
 };
 
