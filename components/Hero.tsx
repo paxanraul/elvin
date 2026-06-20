@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { asset } from "@/lib/asset";
 
 export default function Hero() {
   const imgRef = useRef<HTMLDivElement>(null);
@@ -32,7 +33,7 @@ export default function Hero() {
         className="absolute inset-y-0 right-0 w-full md:w-[48%]"
       >
         <Image
-          src="/img/live-bw.jpg"
+          src={asset("/img/live-bw.jpg")}
           alt="DJ ELVIN за пультом"
           fill
           priority

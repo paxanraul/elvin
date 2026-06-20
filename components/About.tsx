@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 export default function About() {
   return (
@@ -16,7 +17,7 @@ export default function About() {
         <figure className="clip-reveal col-span-12 md:col-span-5">
           <div className="relative aspect-[3/4] overflow-hidden">
             <Image
-              src="/img/portrait-hat.jpg"
+              src={asset("/img/portrait-hat.jpg")}
               alt="DJ ELVIN"
               fill
               sizes="(max-width:768px) 100vw, 40vw"

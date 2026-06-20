@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { CONTACTS } from "@/lib/contacts";
+import { asset } from "@/lib/asset";
 
 type Fields = {
   name: string;
@@ -86,7 +87,7 @@ export default function Booking() {
       {/* edge portrait column */}
       <div className="pointer-events-none absolute right-0 top-0 hidden h-full w-[34%] opacity-[0.22] lg:block">
         <Image
-          src="/img/crouch.jpg"
+          src={asset("/img/crouch.jpg")}
           alt=""
           fill
           sizes="34vw"

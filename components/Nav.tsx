@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { asset } from "@/lib/asset";
 
 const links = [
   { label: "Главная", href: "home" },
@@ -44,7 +45,7 @@ export default function Nav() {
           aria-label="DJ ELVIN — наверх"
         >
           <Image
-            src="/img/logo-mark.png"
+            src={asset("/img/logo-mark.png")}
             alt="DJ ELVIN"
             width={573}
             height={436}
